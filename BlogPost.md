@@ -27,6 +27,7 @@ The ResNet50 network has 50 layers, including many convolutional layers. Those a
 This might be the reason why the model using transfer learning results in a much better accuracy of about 80% correctly classified dog images. 
 
 **Summary**
+
 When working on this project I found out that it is hard to come up with a CNN architecture that can compete with pre-trained models even if the use case is similar and the data set you train on is rather small. That is why I found out for me that I will transfer learning a try in the future when it comes to classifying images. 
 
 
