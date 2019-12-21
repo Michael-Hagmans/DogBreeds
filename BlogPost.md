@@ -1,6 +1,6 @@
 # Classification of Dog Breeds - a Blog Post
 
-In this blog post I would like to describe my journey on classifying dog images to the corresponding dog breed. My point of view is rather technical and I would like to discuss to approaches to solve this data science problem: designing a convolutional neural network (CNN) from scratch or using transfer learning to benefit from pre-trained networks.
+In this blog post I would like to describe my journey on classifying dog images to the corresponding dog breed. My point of view is rather technical and I would like to discuss two approaches to solve this data science problem: Is it worth designing a convolutional neural network (CNN) from scratch or is it reasonable to use transfer learning to benefit from pre-trained networks?
 
 **Why Dog Breeds?**
 
@@ -18,10 +18,17 @@ Even if the architecture sounds a bit complex it is not compared to pre-trained 
 
 **Make Use of Transfer Learning**
 
-In the end dog breed classification worked very well. With 133 different breeds, an accuracy of 1% is already better than guessing.
-Thus an accuracy of about 80% is a very good result. This was reached using transfer learning.
+I decided to use a pre-trained ResNet50 model which was trained on the imagenet data set. This data set contains various images but one part are dog images so the use case is at least similar. The data set used here contains only about 8000 images which is rather small, especially when you consider that we have 133 different dog breeds. So I am using a similar data set and a rather small data set. In such cases it is recommended to use a pre-trained model and just to adjust the final layer.
+
+What I added in the end was a global average pooling layer to avoid overfitting and a dense layer with a node for each dog breed (133). All images were passed through the pre-trained ResNet50 network and the result (bottleneck features) was used to train the final layers. 
+
+The ResNet50 network has 50 layers, including many convolutional layers. Those are capable to adapt many different shapes or even dog parts (eyes, ears, ...) so that a much better accuracy can be expected. 
+
+This might be the reason why the model using transfer learning results in a much better accuracy of about 80% correctly classified dog images. 
 
 **Summary**
+When working on this project I found out that it is hard to come up with a CNN architecture that can compete with pre-trained models even if the use case is similar and the data set you train on is rather small. That is why I found out for me that I will transfer learning a try in the future when it comes to classifying images. 
+
 
 **Acknowledgment**
 
@@ -31,3 +38,5 @@ Furthermore I made use of those sources that helped me solving the problems:
 https://gist.github.com/Thimira/6dc1da782b0dca43485958dbee12a757
 
 https://keras.io/applications/#resnet
+
+https://www.quora.com/What-is-the-deep-neural-network-known-as-%E2%80%9CResNet-50%E2%80%9D
