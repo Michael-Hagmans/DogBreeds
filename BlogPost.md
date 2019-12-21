@@ -8,7 +8,7 @@ On the one hand my motivation is that I personally love dogs but it is hard for 
 
 **Convolutional Neural Networks from Scratch**
 
-I started with designing an architecture for a CNN from scratch. The first layer is a convolutional layer with 16 filters that expects an input shape of 224 by 224 pixels with three color codes each. Is is followed by a max pooling layer that reduces the number of parameters in the model which makes overfitting to the training data less likely. This is because convolutional layers cause the model to have many parameters which makes it possible for the model to fit the training data well. A result might be the model does not work too well on new images which is called overfitting.
+I started with designing an architecture for a CNN from scratch. The first layer is a convolutional layer with 16 filters that expects an input shape of 224 by 224 pixels with three color codes each. It is followed by a max pooling layer that reduces the number of parameters in the model which makes overfitting to the training data less likely. This is because convolutional layers cause the model to have many parameters which makes it possible for the model to fit the training data well. A result might be that the model does not work too well on new images which is called overfitting.
 
 Afterwards another two combinations of convolutional layers and max pooling layers are added where the number of filters is doubled each time so that the third convolutional layer consists of 64 filters. For the filters the idea that they find simple edges and shapes with the early layers and then combine those simple shapes into more complex shapes which happens in the later layers. That is why the number of filters is increasing.
 
@@ -28,7 +28,7 @@ This might be the reason why the model using transfer learning results in a much
 
 **Summary**
 
-When working on this project I found out that it is hard to come up with a CNN architecture that can compete with pre-trained models even if the use case is similar and the data set you train on is rather small. That is why I found out for me that I will transfer learning a try in the future when it comes to classifying images. 
+When working on this project I found out that it is hard to come up with a CNN architecture that can compete with pre-trained models even if the use case is similar and the data set you train on is rather small. That is why I found out for me that I will give transfer learning a try in the future when it comes to classifying images. 
 
 
 **Acknowledgment**
