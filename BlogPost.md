@@ -41,3 +41,9 @@ https://gist.github.com/Thimira/6dc1da782b0dca43485958dbee12a757
 https://keras.io/applications/#resnet
 
 https://www.quora.com/What-is-the-deep-neural-network-known-as-%E2%80%9CResNet-50%E2%80%9D
+
+The data sets used to train the models can be found here:
+
+https://s3-us-west-1.amazonaws.com/udacity-aind/dog-project/dogImages.zip
+
+https://s3-us-west-1.amazonaws.com/udacity-aind/dog-project/lfw.zip
