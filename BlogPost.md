@@ -15,6 +15,7 @@ Afterwards another two combinations of convolutional layers and max pooling laye
 Another chance to avoid overfitting is to add a global average pooling layer in the end which was done in this architecture. Finally a fully connected dense layer with 133 nodes is added in the end. This has one node for each dog breed in the data set.
 
 CNN architecture:
+
 ![Testtext](https://github.com/Michael-Hagmans/DogBreeds/blob/master/models/model1.jpg?raw=true)
 
 Even if the architecture sounds a bit complex it is not compared to pre-trained models that you can use in transfer learning. That might be a reason why the performance of this model is rather weak with about 1% accuracy. 1% is still better than just guessing which would result in an accuracy of about 0.75%, assuming that all breeds have a similar occurrence in the data set. So there is still much room for improvement and there are basically two chances for improvement: You could improve the model's architecture and play around with some of its parameters or you could try one of the pre-trained models out there from keras. To save some time I decided for transfer learning because training different architectures takes a lot of time even on GPU.
@@ -26,6 +27,7 @@ I decided to use a pre-trained ResNet50 model which was trained on the imagenet 
 What I added in the end was a global average pooling layer to avoid overfitting and a dense layer with a node for each dog breed (133). All images were passed through the pre-trained ResNet50 network and the result (bottleneck features) was used to train the final layers. 
 
 Architecture of final layers:
+
 ![Testtext](https://github.com/Michael-Hagmans/DogBreeds/blob/master/models/model2.jpg?raw=true)
 
 The ResNet50 network has 50 layers, including many convolutional layers. Those are capable to adapt many different shapes or even dog parts (eyes, ears, ...) so that a much better accuracy can be expected. 
