@@ -24,4 +24,5 @@ When I was working on this project the things learned in the Udacity Data Scient
 Furthermore I made use of those sources that helped me solving the problems:
 
 https://gist.github.com/Thimira/6dc1da782b0dca43485958dbee12a757
+
 https://keras.io/applications/#resnet
