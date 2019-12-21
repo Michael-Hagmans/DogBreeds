@@ -14,6 +14,9 @@ Afterwards another two combinations of convolutional layers and max pooling laye
 
 Another chance to avoid overfitting is to add a global average pooling layer in the end which was done in this architecture. Finally a fully connected dense layer with 133 nodes is added in the end. This has one node for each dog breed in the data set.
 
+![Testtext](https://github.com/Michael-Hagmans/DogBreeds/blob/master/models/model1.jpg?raw=true)
+
+
 Even if the architecture sounds a bit complex it is not compared to pre-trained models that you can use in transfer learning. That might be a reason why the performance of this model is rather weak with about 1% accuracy. 1% is still better than just guessing which would result in an accuracy of about 0.75%, assuming that all breeds have a similar occurrence in the data set. So there is still much room for improvement and there are basically two chances for improvement: You could improve the model's architecture and play around with some of its parameters or you could try one of the pre-trained models out there from keras. To save some time I decided for transfer learning because training different architectures takes a lot of time even on GPU.
 
 **Make Use of Transfer Learning**
